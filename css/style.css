@@ -1,0 +1,772 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'proxima_nova_rgbold';
+  src: url("../fonts/proximanova-bold-webfont.eot");
+  src: url("../fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-bold-webfont.woff2") format("woff2"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proxima_nova_rgregular';
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  src: url("../fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/proximanova-regular-webfont.woff2") format("woff2"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'museo_sans_cyrl500';
+  src: url("../fonts/museosanscyrl-webfont.eot");
+  src: url("../fonts/museosanscyrl-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl-webfont.woff2") format("woff2"), url("../fonts/museosanscyrl-webfont.woff") format("woff"), url("../fonts/museosanscyrl-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: white;
+}
+
+header {
+  background: url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
+  padding-bottom: 311px;
+}
+
+@media (max-width: 991px) {
+  header {
+    padding-bottom: 200px;
+  }
+}
+
+header .header-wrap {
+  padding: 23px 0;
+  background-image: linear-gradient(180deg, #f7f7f7 0%, black 0%, transparent 100%);
+  border-bottom: 1px solid rgba(69, 69, 69, 0.8);
+}
+
+header .header-wrap .burger {
+  width: 50px;
+  position: absolute;
+  right: 30px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px;
+  display: none;
+  z-index: 2;
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .burger {
+    display: block;
+  }
+}
+
+header .header-wrap .burger-brick {
+  height: 4px;
+  background: #fff;
+  margin-top: 6px;
+  transition: 0.3s ease-out;
+}
+
+header .header-wrap .open .burger-brick:first-child {
+  -webkit-transform: rotate(405deg);
+  -ms-transform: rotate(405deg);
+  transform: rotate(405deg);
+  margin-top: 14px;
+}
+
+header .header-wrap .open .burger-brick:last-child {
+  -webkit-transform: rotate(-405deg);
+  -ms-transform: rotate(-405deg);
+  transform: rotate(-405deg);
+  margin-top: -14px;
+}
+
+header .header-wrap .open .middle {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+header .header-wrap .logo {
+  float: left;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@media (max-width: 768px) {
+  header .header-wrap .logo {
+    margin-left: 20px;
+  }
+}
+
+header .header-wrap .logo img {
+  margin-right: 15px;
+}
+
+header .header-wrap .logo h2 {
+  display: inline-block;
+  color: white;
+  font: 400 22px/1 "proxima_nova_rgregular";
+}
+
+header .header-wrap .logo h2:hover {
+  color: #f7ae09;
+}
+
+header .header-wrap .language {
+  position: absolute;
+  top: 29px;
+  right: 40px;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .language {
+    right: 170px;
+  }
+}
+
+@media (max-width: 500px) {
+  header .header-wrap .language {
+    position: relative;
+    right: 120px;
+  }
+}
+
+header .header-wrap .language li {
+  display: inline-block;
+  padding-right: 25px;
+}
+
+header .header-wrap .language li:last-child {
+  padding-right: 0;
+}
+
+header .header-wrap .language li a {
+  color: #909090;
+  font: 400 14px/1 "proxima_nova_rgregular";
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+
+header .header-wrap .language li a.active {
+  color: white;
+}
+
+header .header-wrap .language li a:last-child {
+  margin-right: 0;
+}
+
+header .header-wrap .language li a:hover {
+  color: #f7ae09;
+}
+
+header .header-wrap .language li a:active {
+  color: white;
+}
+
+header .header-wrap .navigation {
+  float: right;
+  position: relative;
+  margin-right: 50px;
+}
+
+@media (max-width: 1425px) {
+  header .header-wrap .navigation {
+    margin-right: 160px;
+  }
+}
+
+header .header-wrap .navigation ul {
+  margin: 0;
+  padding: 20px 0 0 0;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .navigation ul {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 0;
+  }
+}
+
+header .header-wrap .navigation ul li {
+  display: inline-block;
+  padding-right: 75px;
+}
+
+@media (max-width: 1425px) {
+  header .header-wrap .navigation ul li {
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .navigation ul li {
+    display: block;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .navigation ul li:first-child {
+    padding-top: 105px;
+  }
+}
+
+header .header-wrap .navigation ul li:nth-child(6) {
+  padding-right: 0;
+}
+
+header .header-wrap .navigation ul li a {
+  color: #fff;
+  font: 400 18px/1 "proxima_nova_rgregular";
+  text-decoration: none;
+}
+
+header .header-wrap .navigation ul li a:hover {
+  color: #f7ae09;
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .navigation ul li a {
+    font: 400 39px/1 "proxima_nova_rgregular";
+  }
+}
+
+header .header-wrap .navigation .mob-menu {
+  display: none;
+  color: #fff;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  left: 100px;
+}
+
+@media (max-width: 991px) {
+  header .header-wrap .navigation .mob-menu {
+    display: block;
+  }
+}
+
+header .tagline-wrap {
+  width: 642px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@media (max-width: 651px) {
+  header .tagline-wrap {
+    padding: 0 200px 0;
+    width: auto;
+  }
+}
+
+@media (max-width: 651px) {
+  header .tagline-wrap {
+    padding: 0 175px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  header .tagline-wrap {
+    padding: 0 160px 0;
+  }
+}
+
+@media (max-width: 530px) {
+  header .tagline-wrap {
+    padding: 0 140px 0;
+  }
+}
+
+@media (max-width: 505px) {
+  header .tagline-wrap {
+    padding: 0 125px 0;
+  }
+}
+
+@media (max-width: 460px) {
+  header .tagline-wrap {
+    padding: 0 110px 0;
+  }
+}
+
+@media (max-width: 430px) {
+  header .tagline-wrap {
+    padding: 0 85px 0;
+  }
+}
+
+@media (max-width: 410px) {
+  header .tagline-wrap {
+    padding: 0 85px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  header .tagline-wrap {
+    padding: 0 60px 0;
+  }
+}
+
+@media (max-width: 330px) {
+  header .tagline-wrap {
+    padding: 0 35px 0;
+  }
+}
+
+header .tagline-wrap h1 {
+  color: white;
+  font: 400 72px/87px "museo_sans_cyrl500";
+  padding: 239px 0 27px 0;
+  margin: 0;
+  background: url("../img/ellipse.png") no-repeat center 84px;
+}
+
+@media (max-width: 768px) {
+  header .tagline-wrap h1 {
+    background-size: 50%;
+    padding: 153px 0 27px 0;
+    font-size: 59px;
+  }
+}
+
+@media (max-width: 651px) {
+  header .tagline-wrap h1 {
+    padding: 105px 0 60px 0;
+    font: 400 24px/38px "museo_sans_cyrl500";
+    background-size: 67%;
+  }
+}
+
+@media (max-width: 320px) {
+  header .tagline-wrap h1 {
+    padding: 120px 0 27px 0;
+    font: 400 24px/38px "museo_sans_cyrl500";
+  }
+}
+
+header .tagline-wrap p {
+  color: white;
+  font: 400 22px/34px "proxima_nova_rgregular";
+  margin: 0;
+}
+
+@media (max-width: 651px) {
+  header .tagline-wrap p {
+    font: 400 14px/20px "proxima_nova_rgregular";
+  }
+}
+
+.work-list {
+  margin-top: -100px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .work-list {
+    padding-bottom: 100px;
+  }
+}
+
+.work-list .work-item {
+  padding: 10px;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.work-list .work-item.work-item-left-down, .work-list .work-item.work-item-right-down {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.work-list .work-item a {
+  display: inline-block;
+}
+
+.work-list .work-item img {
+  max-width: 100%;
+}
+
+.work-list .all-case {
+  margin-top: 26px;
+  text-align: center;
+  position: relative;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.work-list .all-case a {
+  color: #f7b205;
+  font: 400 20px/72px "proxima_nova_rgregular";
+  text-decoration: none;
+}
+
+.work-list .all-case a:after {
+  content: '→';
+  padding-left: 10px;
+}
+
+.work-list .all-case a:hover {
+  color: #ff760f;
+}
+
+.partners {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  background: white;
+  text-align: center;
+  padding-bottom: 263px;
+}
+
+@media (max-width: 700px) {
+  .partners {
+    padding-bottom: 130px;
+  }
+}
+
+.partners h2 {
+  font: 400 66px/68px "museo_sans_cyrl500";
+  margin: 0;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@media (max-width: 675px) {
+  .partners h2 {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .partners h2 {
+    font: 400 28px/68px "museo_sans_cyrl500";
+  }
+}
+
+.partners p {
+  color: #3b3b3b;
+  font: 400 18px/72px "proxima_nova_rgregular";
+  margin: 0 0 35px 0;
+}
+
+@media (max-width: 675px) {
+  .partners p {
+    font: 400 18px/26px "proxima_nova_rgregular";
+  }
+}
+
+.brands {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.brands .brand-item {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 75px;
+}
+
+@media (max-width: 991px) {
+  .brands .brand-item {
+    margin-right: 10px;
+    width: 15%;
+  }
+}
+
+@media (max-width: 700px) {
+  .brands .brand-item {
+    width: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+  .brands .brand-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.brands .brand-item:last-child {
+  margin-right: 0;
+}
+
+.brands .brand-item:hover {
+  opacity: .8;
+}
+
+.brands .brand-item img {
+  max-width: 100%;
+}
+
+.plan {
+  background: black;
+  border-bottom: 1px solid rgba(69, 69, 69, 0.8);
+  padding-bottom: 92px;
+}
+
+@media (max-width: 768px) {
+  .plan {
+    text-align: center;
+  }
+}
+
+.plan h2 {
+  padding: 89px 0 62px 0;
+  margin: 0;
+  color: white;
+  font: 400 66px/72px "museo_sans_cyrl500";
+  text-align: center;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@media (max-width: 991px) {
+  .plan h2 {
+    font: 400 36px/72px "museo_sans_cyrl500";
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan h2 {
+    padding: 50px 0 15px 0;
+  }
+}
+
+.plan .plan-item {
+  cursor: pointer;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.plan .plan-item h3 {
+  color: #ff760f;
+  margin-bottom: 23px;
+  font: 400 46px/30px "museo_sans_cyrl500";
+}
+
+@media (max-width: 991px) {
+  .plan .plan-item h3 {
+    font: 400 32px/1 "museo_sans_cyrl500";
+  }
+}
+
+.plan .plan-item span {
+  color: #3b3b3b;
+  font: 400 18px/30px "proxima_nova_rgregular";
+  display: inline-block;
+  margin-bottom: 23px;
+}
+
+.plan .plan-item p {
+  color: #9b9b9b;
+  font: 400 18px/30px "proxima_nova_rgregular";
+}
+
+.plan .plan-item p:hover {
+  opacity: 0.6;
+}
+
+footer .footer-wrap {
+  padding: 47px 0 61px 0;
+  background: black;
+}
+
+@media (max-width: 991px) {
+  footer .footer-wrap {
+    display: none;
+  }
+}
+
+footer .footer-wrap .logo {
+  float: left;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+footer .footer-wrap .logo img {
+  vertical-align: top;
+  padding-top: 20px;
+  margin-right: 15px;
+}
+
+footer .footer-wrap .logo h2 {
+  display: inline-block;
+  color: white;
+  font: 400 22px/1 "proxima_nova_rgregular";
+}
+
+footer .footer-wrap .logo h2:hover {
+  color: #f7ae09;
+}
+
+footer .footer-wrap .navigation {
+  float: right;
+  position: relative;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+footer .footer-wrap .navigation ul {
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+
+footer .footer-wrap .navigation ul li {
+  display: inline-block;
+  padding-right: 75px;
+}
+
+@media (max-width: 1200px) {
+  footer .footer-wrap .navigation ul li {
+    padding-right: 35px;
+  }
+}
+
+footer .footer-wrap .navigation ul li:nth-child(7) {
+  padding-right: 15px;
+}
+
+footer .footer-wrap .navigation ul li:nth-child(7) a {
+  color: #6d6d6d;
+}
+
+footer .footer-wrap .navigation ul li:nth-child(8) {
+  padding-right: 15px;
+}
+
+footer .footer-wrap .navigation ul li:nth-child(8) a {
+  color: white;
+}
+
+footer .footer-wrap .navigation ul li:last-child {
+  padding-right: 0;
+}
+
+footer .footer-wrap .navigation ul li:last-child a {
+  color: #6d6d6d;
+}
+
+footer .footer-wrap .navigation ul li a {
+  color: #fff;
+  font: 400 18px/1 "proxima_nova_rgregular";
+  text-decoration: none;
+}
+
+footer .footer-wrap .navigation ul li a:hover {
+  color: #f7ae09;
+}
+
+footer .footer-down {
+  background: black;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 991px) {
+  footer .footer-down {
+    padding-top: 40px;
+  }
+}
+
+footer .footer-down .copyright {
+  float: left;
+}
+
+@media (max-width: 769px) {
+  footer .footer-down .copyright {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer .footer-down .copyright {
+    float: none;
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+footer .footer-down .copyright span {
+  color: white;
+  font: 400 14px/1 "proxima_nova_rgregular";
+}
+
+footer .footer-down .social {
+  float: right;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@media (max-width: 769px) {
+  footer .footer-down .social {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer .footer-down .social {
+    float: none;
+    text-align: center;
+    margin-right: 0;
+  }
+}
+
+footer .footer-down .social .social-item {
+  margin-right: 16px;
+}
+
+footer .footer-down .social .social-item:last-child {
+  margin-right: 0;
+}
+
+footer .footer-down .social .social-item:hover {
+  opacity: .7;
+}
